@@ -81,6 +81,7 @@ h2 {
 
 h2 {
   text-align: center;
+  color: var(--accent2);
 }
 
 /* Hero Section */
