@@ -31,6 +31,7 @@
       <img src="images/hero.jpg" alt="White water rafters navigating a thrilling rapid">
       <h1>Contact Wild Waters Rafting</h1>
       <article>
+        <h2>We're Here to Help</h2>
         <img src="images/happy-client.jpg" alt="Happy rafting client smiling after a great ride">
         <p>
           Have questions about our rafting adventures? Ready to book your next expedition?
@@ -61,12 +62,11 @@
           </div>
         </div>
 
-        <!-- Embedded Google Map (No inline border style) -->
+        <!-- Embedded Google Map - FIXED: removed width="100%" (using CSS instead) -->
         <div class="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509091!2d-119.7645206846812!3d36.632758979965515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8095f3c3e7b5b9d9%3A0x6e8c3b3e7b5b9d9!2sThree%20Rivers%2C%20CA!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus"
-            width="100%" height="300" allowfullscreen="" loading="lazy"
-            title="Wild Waters Rafting Location Map">
+            height="300" allowfullscreen="" loading="lazy" title="Wild Waters Rafting Location Map">
           </iframe>
         </div>
       </div>
@@ -85,17 +85,15 @@
             <legend>Purpose of Message</legend>
             <label for="purpose-general">
               <input type="radio" id="purpose-general" name="purpose" value="general" required>
-              General
-              Inquiry
+              General Inquiry
             </label>
             <label for="purpose-reservation">
               <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
-              Reservation
-              Question
+              Reservation Question
             </label>
             <label for="purpose-suggestion">
-              <input type="radio" id="purpose-suggestion" name="purpose" value="suggestion"> Website
-              Suggestion
+              <input type="radio" id="purpose-suggestion" name="purpose" value="suggestion">
+              Website Suggestion
             </label>
           </fieldset>
 
@@ -105,8 +103,7 @@
 
           <label for="newsletter" class="checkbox-label">
             <input type="checkbox" id="newsletter" name="newsletter" value="subscribe"> Please
-            subscribe
-            me to the monthly newsletter
+            subscribe me to the monthly newsletter
           </label>
 
           <button type="submit" class="submit-btn">Get in Touch!</button>
