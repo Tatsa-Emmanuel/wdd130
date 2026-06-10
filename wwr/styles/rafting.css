@@ -1,38 +1,36 @@
 /* =============================================
    Wild Waters Rafting – rafting.css
-   WDD 130 | W03 Assignment
    ============================================= */
 
-/* CSS Variables (Color Scheme & Fonts) */
+/* CSS Variables */
 :root {
-  --primary-color: #1a5276;
-  --secondary-color: #d4e6f1;
-  --accent1-color: #1b2631;
-  --accent2-color: #f0b27a;
+  --primary: #1a5276;
+  --secondary: #d4e6f1;
+  --accent1: #1b2631;
+  --accent2: #f0b27a;
   --text-light: #ffffff;
   --text-dark: #1b2631;
-  --background-light: #f5f8fa;
-  --background-white: #ffffff;
-  --shadow-color: rgba(0, 0, 0, 0.1);
+  --bg-light: #f5f8fa;
+  --bg-white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
   --heading-font: "Georgia", "Times New Roman", serif;
   --body-font: "Trebuchet MS", Verdana, sans-serif;
 }
 
-/* Box Model Reset */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   font-family: var(--body-font);
   color: var(--text-dark);
-  background-color: var(--background-light);
+  background-color: var(--bg-light);
 }
 
-/* Center and limit width for header, main, footer */
+/* Layout Containers */
 header,
 main,
 footer {
@@ -40,10 +38,9 @@ footer {
   margin: 0 auto;
 }
 
-/* ---- HEADER ---- */
+/* Header - Grid Layout */
 header {
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
+  background-color: var(--primary);
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
@@ -55,21 +52,19 @@ header img {
   height: auto;
 }
 
-/* ---- NAVIGATION ---- */
+/* Navigation - Flex Layout */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   gap: 20px;
 }
 
 nav ul li a {
-  color: var(--accent2-color);
+  color: var(--accent2);
   text-decoration: none;
   font-weight: bold;
   font-size: 0.95rem;
-  letter-spacing: 0.04em;
   transition: color 0.2s;
 }
 
@@ -77,23 +72,18 @@ nav ul li a:hover {
   color: var(--text-light);
 }
 
-/* ---- HEADINGS ---- */
+/* Headings */
 h1,
 h2 {
   font-family: var(--heading-font);
-  color: var(--primary-color);
+  color: var(--primary);
 }
 
-/* ---- GENERAL SPACING ---- */
-nav,
-p,
-section,
-article {
-  margin: 16px;
-  padding: 8px;
+h2 {
+  text-align: center;
 }
 
-/* ---- HERO DIV ---- */
+/* Hero Section */
 .hero {
   position: relative;
 }
@@ -104,31 +94,24 @@ article {
   height: auto;
 }
 
-/* Hero H1 */
-h1 {
+.hero h1 {
   position: absolute;
   top: 20px;
   width: 100%;
   padding: 16px;
   text-align: center;
   opacity: 0.85;
-  background-color: var(--accent1-color);
+  background-color: var(--accent1);
   color: var(--text-light);
   font-size: 2.2rem;
-  letter-spacing: 0.05em;
 }
 
-h2 {
-  text-align: center;
-}
-
-/* Hero Article - FIXED: NO rgba() with CSS variables */
 .hero article {
   position: absolute;
   bottom: 24px;
   left: 24px;
   width: 55%;
-  background-color: #1a5276;
+  background-color: var(--primary);
   opacity: 0.82;
   color: var(--text-light);
   border-radius: 6px;
@@ -136,51 +119,43 @@ h2 {
 }
 
 .hero article p {
-  margin: 8px;
-  padding: 4px;
   font-size: 0.9rem;
   line-height: 1.5;
-  color: var(--background-light);
+  color: var(--bg-light);
 }
 
-/* Small client/employee image inside article */
 .hero article img {
   float: right;
   width: 125px;
   height: auto;
   margin: 0 0 8px 12px;
   border-radius: 4px;
-  border: 2px solid var(--accent2-color);
+  border: 2px solid var(--accent2);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* ---- SECTIONS ---- */
-section {
-  background-color: var(--background-white);
-  border-left: 4px solid var(--primary-color);
-  border-radius: 4px;
-  box-shadow: 0 1px 4px var(--shadow-color);
+/* Reusable Card Component */
+section,
+.company-info,
+.contact-form,
+.employee-profiles {
+  background-color: var(--bg-white);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
+  padding: 20px;
 }
 
-section h2 {
-  padding: 8px 16px 4px;
-  font-size: 1.4rem;
+section {
+  margin: 40px 0;
 }
 
 section p {
-  color: var(--text-dark);
   line-height: 1.7;
-  font-size: 0.97rem;
+  margin-top: 8px;
 }
 
-.history-section {
-  margin-top: 40px;
-  background-color: var(--background-white);
-  border-left: 4px solid var(--primary-color);
-  border-radius: 4px;
-  box-shadow: 0 1px 4px var(--shadow-color);
-}
-
+/* History Section - 3 Column Grid */
 .history-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -193,17 +168,10 @@ section p {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px var(--shadow-color);
+  box-shadow: 0 4px 8px var(--shadow);
 }
 
-.adventures-section {
-  margin: 40px 0;
-  background-color: var(--background-white);
-  border-left: 4px solid var(--primary-color);
-  border-radius: 4px;
-  box-shadow: 0 1px 4px var(--shadow-color);
-}
-
+/* Adventures Gallery - Flex Row */
 .adventure-gallery {
   display: flex;
   justify-content: space-between;
@@ -223,19 +191,196 @@ section p {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 2px 6px var(--shadow-color);
+  box-shadow: 0 2px 6px var(--shadow);
 }
 
 .adventure-gallery figcaption {
   margin-top: 8px;
   font-weight: bold;
-  color: var(--primary-color);
+  color: var(--primary);
 }
 
-/* ---- FOOTER ---- */
+/* Contact Page - 2 Column Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+/* Company Info */
+.contact-details {
+  margin-bottom: 24px;
+}
+
+.contact-item {
+  margin-bottom: 16px;
+  padding: 8px;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.contact-item strong {
+  color: var(--primary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+/* Contact Form */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--secondary);
+  border-radius: 4px;
+  font-family: var(--body-font);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.contact-form fieldset {
+  border: 1px solid var(--secondary);
+  border-radius: 6px;
+  padding: 12px 16px;
+}
+
+.contact-form legend {
+  font-weight: bold;
+  color: var(--primary);
+  padding: 0 8px;
+}
+
+.contact-form fieldset label {
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: var(--primary);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 8px;
+}
+
+.submit-btn:hover {
+  background-color: var(--accent1);
+}
+
+/* Employee Profiles - FIXED */
+.employee-profiles {
+  background-color: var(--bg-white);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow);
+  padding: 20px;
+  margin: 40px 0;
+}
+
+.employee-profiles h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+
+.profiles-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.profiles-grid figure {
+  flex: 1;
+  min-width: 220px;
+  max-width: 260px;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: var(--bg-light);
+  border-radius: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.profiles-grid figure:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+.profiles-grid img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent2);
+  margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profiles-grid figcaption {
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+.profiles-grid figcaption strong {
+  color: var(--primary);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Footer */
 footer {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
+  background-color: var(--primary);
+  color: var(--secondary);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -244,22 +389,14 @@ footer {
 }
 
 footer p {
-  margin-bottom: 0;
+  margin: 0;
   font-size: 0.88rem;
-  color: var(--secondary-color);
 }
 
-/* Social media nav */
 .socialmedia {
   display: flex;
   justify-content: flex-end;
   gap: 15px;
-  margin: 0;
-  padding: 0;
-}
-
-.socialmedia a {
-  text-decoration: none;
 }
 
 .socialmedia img {
@@ -274,245 +411,7 @@ footer p {
   opacity: 1;
 }
 
-/* ---- CONTACT PAGE GRID LAYOUT (Two Columns) ---- */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin: 40px 0;
-  padding: 0 16px;
-}
-
-/* Company Information Section */
-.company-info {
-  background-color: var(--background-white);
-  border-left: 4px solid var(--primary-color);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px var(--shadow-color);
-  padding: 20px;
-}
-
-.company-info h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: var(--primary-color);
-}
-
-.contact-details {
-  margin-bottom: 24px;
-}
-
-.contact-item {
-  margin-bottom: 16px;
-  padding: 8px;
-  border-bottom: 1px solid var(--secondary-color);
-}
-
-.contact-item strong {
-  color: var(--primary-color);
-  font-size: 1.1rem;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.contact-item p {
-  margin: 0;
-  color: var(--text-dark);
-  font-size: 0.95rem;
-}
-
-/* Google Map Container */
-.map-container {
-  margin-top: 20px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px var(--shadow-color);
-}
-
-.map-container iframe {
-  display: block;
-  width: 100%;
-  height: 300px;
-  border: 0;
-}
-
-/* Contact Form Section */
-.contact-form {
-  background-color: var(--background-white);
-  border-left: 4px solid var(--primary-color);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px var(--shadow-color);
-  padding: 20px;
-}
-
-.contact-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: var(--primary-color);
-}
-
-/* Form Elements */
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.contact-form label {
-  font-weight: bold;
-  color: var(--text-dark);
-  margin-bottom: -8px;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 4px;
-  font-family: var(--body-font);
-  font-size: 0.95rem;
-  transition: border-color 0.2s;
-}
-
-.contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(26, 82, 118, 0.1);
-}
-
-/* Fieldset for Radio Buttons */
-.contact-form fieldset {
-  border: 1px solid var(--secondary-color);
-  border-radius: 6px;
-  padding: 12px 16px;
-  margin: 8px 0;
-}
-
-.contact-form legend {
-  font-weight: bold;
-  color: var(--primary-color);
-  padding: 0 8px;
-}
-
-.contact-form fieldset label {
-  font-weight: normal;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.contact-form input[type="radio"] {
-  width: auto;
-  margin: 0;
-  cursor: pointer;
-}
-
-/* Checkbox Label */
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  font-weight: normal;
-}
-
-.checkbox-label input[type="checkbox"] {
-  width: auto;
-  margin: 0;
-  cursor: pointer;
-}
-
-/* Submit Button */
-.submit-btn {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  border: none;
-  border-radius: 6px;
-  padding: 12px 24px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  font-family: var(--body-font);
-  cursor: pointer;
-  transition: background-color 0.2s, transform 0.1s;
-  margin-top: 8px;
-}
-
-.submit-btn:hover {
-  background-color: var(--accent1-color);
-}
-
-.submit-btn:active {
-  transform: scale(0.98);
-}
-
-/* ---- EMPLOYEE PROFILES SECTION ---- */
-.employee-profiles {
-  margin: 40px 0;
-  background-color: var(--background-white);
-  border-left: 4px solid var(--primary-color);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px var(--shadow-color);
-  padding: 20px;
-}
-
-.employee-profiles h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: var(--primary-color);
-}
-
-.profiles-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.profiles-grid figure {
-  flex: 1;
-  min-width: 200px;
-  text-align: center;
-  margin: 0;
-  padding: 16px;
-  background-color: var(--background-light);
-  border-radius: 12px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.profiles-grid figure:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px var(--shadow-color);
-}
-
-.profiles-grid img {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
-  border: 3px solid var(--accent2-color);
-  margin-bottom: 12px;
-}
-
-.profiles-grid figcaption {
-  font-size: 0.95rem;
-  color: var(--text-dark);
-  line-height: 1.5;
-}
-
-.profiles-grid figcaption strong {
-  color: var(--primary-color);
-  font-size: 1.1rem;
-}
-
-/* ---- RESPONSIVE DESIGN FOR CONTACT PAGE ---- */
+/* Responsive Design */
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
