@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Contact Wild Waters Rafting – Get in touch with our team for questions about white water rafting trips, reservations, and adventures. Located in Kolob, California.">
+  <meta name="author" content="Tatsa Zoho Noubosse Emmanuel">
+  <title>Contact Us | Wild Waters Rafting</title>
+  <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="https://picsum.photos/id/104/120/80?grayscale" alt="Wild Waters Rafting Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="trips.html">Trips</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section (reusing style from about page) -->
+    <div class="hero">
+      <img src="https://picsum.photos/id/29/1200/500"
+        alt="White water rafters navigating a thrilling rapid">
+      <h1>Contact Wild Waters Rafting</h1>
+      <article>
+        <img src="https://picsum.photos/id/155/125/125"
+          alt="Happy rafting client smiling after a great ride">
+        <p>
+          Have questions about our rafting adventures? Ready to book your next expedition?
+          Our team is here to help you navigate the planning process. Reach out to us
+          using the form below or visit our river outpost. We look forward to hearing from you!
+        </p>
+      </article>
+    </div>
+
+    <!-- Two-column layout: Company Info + Map | Contact Form -->
+    <div class="contact-grid">
+
+      <!-- LEFT COLUMN: Company Information + Google Map -->
+      <div class="company-info">
+        <h2>Get in Touch</h2>
+        <div class="contact-details">
+          <div class="contact-item">
+            <strong>📍 Address</strong>
+            <p>123 Main River Street<br>Kolob, California 90210</p>
+          </div>
+          <div class="contact-item">
+            <strong>📞 Phone</strong>
+            <p>+1 (999) 999-9999</p>
+          </div>
+          <div class="contact-item">
+            <strong>✉️ Email</strong>
+            <p>info@whitewater.com</p>
+          </div>
+        </div>
+
+        <!-- Embedded Google Map (No inline border style) -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509091!2d-119.7645206846812!3d36.632758979965515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8095f3c3e7b5b9d9%3A0x6e8c3b3e7b5b9d9!2sThree%20Rivers%2C%20CA!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus"
+            width="100%" height="300" allowfullscreen="" loading="lazy"
+            title="Wild Waters Rafting Location Map">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Contact Form -->
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form action="#" method="post">
+          <!-- Name field -->
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+          <!-- Email field -->
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+          <!-- Purpose of message (radio buttons) -->
+          <fieldset>
+            <legend>Purpose of Message</legend>
+            <label>
+              <input type="radio" name="purpose" value="general" required> General Inquiry
+            </label>
+            <label>
+              <input type="radio" name="purpose" value="reservation"> Reservation Question
+            </label>
+            <label>
+              <input type="radio" name="purpose" value="suggestion"> Website Suggestion
+            </label>
+          </fieldset>
+
+          <!-- Message textarea -->
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message here..."
+            required></textarea>
+
+          <!-- Newsletter checkbox -->
+          <label class="checkbox-label">
+            <input type="checkbox" name="newsletter" value="subscribe"> Please subscribe me to the
+            monthly newsletter
+          </label>
+
+          <!-- Submit button -->
+          <button type="submit" class="submit-btn">Get in Touch!</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Employee Profiles Section -->
+    <section class="employee-profiles">
+      <h2>Meet Our Expert Guides</h2>
+      <div class="profiles-grid">
+        <figure>
+          <img src="https://picsum.photos/id/100/250/250" alt="Lead Guide - Sarah Rivers">
+          <figcaption>
+            <strong>Sarah Rivers</strong><br>
+            Lead Guide & Safety Director
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/id/91/250/250" alt="Senior Guide - Mike Torrent">
+          <figcaption>
+            <strong>Mike Torrent</strong><br>
+            Senior Whitewater Guide
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/id/99/250/250" alt="Operations Manager - Jenny Falls">
+          <figcaption>
+            <strong>Jenny Falls</strong><br>
+            Operations Manager
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Wild Waters Rafting &mdash; Tatsa Zoho Noubosse Emmanuel</p>
+    <nav class="socialmedia">
+      <a href="https://facebook.com">
+        <img src="images/facebook.png" alt="Facebook Icon">
+      </a>
+      <a href="https://linkedin.com">
+        <img src="images/linkedin.png" alt="LinkedIn Icon">
+      </a>
+      <a href="https://instagram.com">
+        <img src="images/instagram.png" alt="Instagram Icon">
+      </a>
+    </nav>
+  </footer>
+
+</body>
+
+</html>
