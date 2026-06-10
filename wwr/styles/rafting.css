@@ -122,13 +122,13 @@ h2 {
   text-align: center;
 }
 
-/* Hero Article - FIXED: removed rgba() with CSS variable */
+/* Hero Article - FIXED: NO rgba() with CSS variables */
 .hero article {
   position: absolute;
   bottom: 24px;
   left: 24px;
   width: 55%;
-  background-color: var(--primary-color);
+  background-color: #1a5276;
   opacity: 0.82;
   color: var(--text-light);
   border-radius: 6px;
@@ -173,7 +173,6 @@ section p {
   font-size: 0.97rem;
 }
 
-/* History Section - FIXED: replaced #fff and rgba with variables */
 .history-section {
   margin-top: 40px;
   background-color: var(--background-white);
@@ -197,7 +196,6 @@ section p {
   box-shadow: 0 4px 8px var(--shadow-color);
 }
 
-/* Adventures Section - FIXED: replaced #fff and rgba with variables */
 .adventures-section {
   margin: 40px 0;
   background-color: var(--background-white);
