@@ -445,3 +445,231 @@ footer p {
     width: 100%;
   }
 }
+
+/* =============================================
+   Home Page Specific Styles
+   ============================================= */
+
+/* Center the Hero Message over the image */
+.hero-msg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(27, 38, 49, 0.7);
+  /* accent1 with transparency */
+  padding: 30px;
+  border-radius: 8px;
+  width: 60%;
+}
+
+.hero-msg h1 {
+  position: static;
+  background: transparent;
+  color: var(--accent2);
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 2.8rem;
+}
+
+.hero-msg p {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+/* Call To Action Buttons */
+.action-btn {
+  background-color: var(--accent2);
+  color: var(--accent1);
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  display: inline-block;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #f5cba7;
+  transform: scale(1.05);
+}
+
+.dark-btn {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+.dark-btn:hover {
+  background-color: var(--accent1);
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  text-align: center;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  border: 1px solid var(--secondary);
+  border-radius: 4px;
+  width: 250px;
+}
+
+/* Home Features Grid (3 Columns) */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+  background: transparent;
+  box-shadow: none;
+  border-left: none;
+  padding: 0;
+}
+
+.features-grid figure {
+  background-color: var(--bg-white);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow);
+  margin: 0;
+}
+
+.features-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.features-grid figcaption {
+  margin-top: 15px;
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+/* Overlap Grid Layout */
+.overlap-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  align-items: center;
+  margin: 60px 0;
+  background-color: #d6ccbe;
+  /* Tan background from mockup */
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.overlap-img {
+  grid-column: 1 / 7;
+  grid-row: 1;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.overlap-text {
+  grid-column: 6 / 11;
+  grid-row: 1;
+  background-color: #6d7b69;
+  /* Olive green from mockup */
+  color: var(--text-light);
+  padding: 40px;
+  z-index: 2;
+  border: none;
+  border-radius: 0;
+}
+
+.overlap-text h2 {
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+/* =============================================
+   Trips Page Specific Styles
+   ============================================= */
+
+.cta-section {
+  text-align: center;
+  background-color: var(--secondary);
+  border-left: 4px solid var(--accent2);
+}
+
+.trips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.trip-card {
+  background-color: var(--bg-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.trip-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.trip-card h3 {
+  color: var(--primary);
+  margin: 15px 15px 5px 15px;
+  font-family: var(--heading-font);
+}
+
+.trip-card p {
+  padding: 0 15px 20px 15px;
+  margin: 0;
+}
+
+/* Trips Table */
+.table-section {
+  overflow-x: auto;
+}
+
+.trips-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.trips-table th,
+.trips-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.trips-table th {
+  background-color: var(--primary);
+  color: var(--text-light);
+  font-family: var(--heading-font);
+}
+
+.trips-table tbody tr:nth-child(even) {
+  background-color: var(--bg-light);
+}
+
+.trips-table tbody tr:hover {
+  background-color: var(--secondary);
+}
